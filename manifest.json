@@ -1,0 +1,37 @@
+{
+  "manifest_version": 2,
+  "name": "Restocker",
+  "version": "1.0",
+  "description": "Restocking visual assistant",
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+
+  "icons": {
+    "48": "icons/restocker_icon.png"
+  },
+  
+  "browser_action": {
+    "default_icon": {
+      "16": "icons/restocker_icon16.png",
+      "32": "icons/restocker_icon32.png"
+    }
+  },
+
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  },
+
+  "background": {
+    "scripts": ["background.js"]
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["https://www.neopets.com/objects.phtml*"],
+      "js": ["highlight.js"]
+    }
+  ]
+}

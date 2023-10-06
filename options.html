@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shop Inventory Data</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        select, textarea, button {
+            width: 80%; /* Makes these elements take the full width of their container */
+            margin-top: 10px;
+        }
+
+        textarea {
+            height: 150px; /* Sets a bigger default height for the text areas */
+            resize: vertical; /* Allows users to resize the text areas vertically if they want */
+            padding: 10px; /* Adds some inner padding to the text areas */
+            font-size: 16px; /* Makes the font a bit bigger inside the text areas */
+        }
+
+        button {
+            padding: 10px 15px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #45a049; /* Gives a hover effect to the button */
+        }
+
+        label {
+            display: block;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+		 .instruction-box {
+            background-color: #e6f7ff; /* light blue background */
+            border: 1px solid #b3daff; /* blue border */
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px; /* space between instruction box and the next element */
+        }
+    </style>
+</head>
+<body>
+
+<div class="instruction-box">
+    <strong>Instructions:</strong>
+    <p>Select a shop from the dropdown list. Enter the items you'd like to grey out and the items you'd like to highlight in the respective text areas. Each item should be on a new line and EXACTLY match the in-game name of the item. I suggest you also store your item lists in text file for backup. <br><br> Dont forget to Click 'Save' to apply your settings.</p>
+</div>
+
+<label for="dropdown">Select Shop(ordered by shopID):</label>
+<select id="dropdown">
+    <option value="mode1">Neopian Foods</option>
+    <option value="mode2">Kauvara's Magic Shop</option>
+    <option value="mode3">Toy Shop</option>
+	<option value="mode4">Uni's Clothing Shop</option>
+    <option value="mode5">Grooming Shop</option>
+    <option value="mode7">Book Shop</option>
+	<option value="mode8">Collectable Card Shop</option>
+    <option value="mode9">Battle Magic Shop</option>
+    <option value="mode10">Defense Magic Shop</option>
+	<option value="mode12">Garden Center</option>
+    <option value="mode13">Neopian Pharmacy</option>
+    <option value="mode14">Chocolate Factory</option>
+	<option value="mode15">Bakery</option>
+    <option value="mode16">Healthy Food</option>
+    <option value="mode17">Neopian Gift Shop</option>
+	<option value="mode18">Smoothie Store</option>
+    <option value="mode20">Tropical Food</option>
+    <option value="mode21">Tiki Tack</option>
+	<option value="mode22">Grundos</option>
+	<option value="mode23">Space Weaponry</option>
+	<option value="mode24">Space Armour</option>
+	<option value="mode25">Neopian Petpet Shop</option>
+	<option value="mode26">Robopet Shop</option>
+	<option value="mode27">Rock Pool</option>
+	<option value="mode30">Spooky Food</option>
+	<option value="mode31">Spooky Petpets</option>
+	<option value="mode34">Ye Olde Coffee Shop</option>
+	<option value="mode35">Slushie Shop</option>
+	<option value="mode36">Ice Crystal Shop</option>
+	<option value="mode37">Icy Fun Snow Shop</option>
+	<option value="mode38">Faerieland Bookshop</option>
+	<option value="mode39">Faerie Food</option>
+	<option value="mode40">Faerieland Petpets</option>
+	<option value="mode41">Neopian Furniture</option>
+	<option value="mode42">Tyrannian Food</option>
+	<option value="mode43">Tyrannian Furniture</option>
+	<option value="mode44">Tyrannian Petpets</option>
+	<option value="mode45">Tyrannian Weaponry</option>
+	<option value="mode46">Huberts Hot Dogs</option>
+	<option value="mode47">Pizzaroo</option>
+	<option value="mode48">Usuki Land</option>
+	<option value="mode49">Food of the Lost Desert</option>
+	<option value="mode50">Peopatra's Petpets</option>
+	<option value="mode51">Sutek's Scrolls</option>
+	<option value="mode53">Back to School Shop</option>
+	<option value="mode54">Battle Supplies</option>
+	<option value="mode55">Osiri's Pottery</option>
+	<option value="mode56">Merifoods</option>
+	<option value="mode57">Ye Olde Petpets</option>
+	<option value="mode58">Neopian Post Office</option>
+	<option value="mode59">Haunted Weaponry</option>
+	<option value="mode60">Spooky Furniture</option>
+	<option value="mode61">Wintery Petpet</option>
+	<option value="mode62">Jelly Food</option>
+	<option value="mode63">Refreshments</option>
+	<option value="mode66">Kiko Lake Treats</option>
+	<option value="mode67">Kiko Lake Carpentry</option>
+	<option value="mode68">Collectable Coins</option>
+	<option value="mode69">Petpet Supplies</option>
+	<option value="mode70">Booktastic Books</option>
+	<option value="mode71">Kreludan Homes</option>
+	<option value="mode72">Cafe Kreludor</option>
+	<option value="mode73">Kayla's Potion Shop</option>
+	<option value="mode74">Darigan Toys</option>
+	<option value="mode75">Faerie Furniture</option>
+	<option value="mode76">Roo Island Merchandise Shop</option>
+	<option value="mode77">Brightvale Books</option>
+	<option value="mode78">The Scrollery</option>
+	<option value="mode79">Brightvale Glaziers</option>
+	<option value="mode80">Brightvale Armory</option>
+	<option value="mode81">Brightvale Fruits</option>
+	<option value="mode82">Brightvale Motery</option>
+	<option value="mode83">Royal Potionery</option>
+	<option value="mode84">Neopian Music Shop</option>
+	<option value="mode85">Lost Desert Medicine</option>
+	<option value="mode86">Collectable Sea Shells</option>
+	<option value="mode87">Maractite Marvels</option>
+	<option value="mode88">Maraquan Petpets</option>
+	<option value="mode89">Geraptiku Petpets</option>
+	<option value="mode90">Qasalan Delights</option>
+	<option value="mode91">Desert Arms</option>
+	<option value="mode92">Words of Antiquity</option>
+	<option value="mode93">Faerie Weapon Shop</option>
+	<option value="mode94">Illustrious Armoury</option>
+	<option value="mode95">Exquisite Ambrosia</option>
+	<option value="mode96">Magical Marvels</option>
+	<option value="mode97">Legendary Petpets</option>
+	<option value="mode98">Plushie Palace</option>
+	<option value="mode100">Wonderous Weaponry</option>
+	<option value="mode101">Exotic Foods</option>
+	<option value="mode102">Remarkable Restoratives</option>
+	<option value="mode103">Fanciful Fauna</option>
+	<option value="mode104">Chesterdrawers Antiques</option>
+	<option value="mode105">The Crumpetmonger</option>
+	<option value="mode106">Neovian Printing Press</option>
+	<option value="mode107">Prigpants and Swolthy</option>
+	<option value="mode108">Mystical Surroundings</option>
+	<option value="mode110">Lampwyck's Lights Fantastic</option>
+	<option value="mode111">Cog's Togs </option>
+	<option value="mode112">Molten Morsels </option>
+	<option value="mode113">Moltaran Petpets </option>
+	<option value="mode114">Moltaran Books </option>
+	<option value="mode116">Springy Things </option>
+	<option value="mode117">Ugga Shrines </option>
+	</select>
+
+<label for="input1">Items to grey out:</label>
+<textarea id="input1" placeholder="Enter items to grey out, separated by line breaks"></textarea>
+
+<label for="input2">Items to highlight:</label>
+<textarea id="input2" placeholder="Enter items to highlight, separated by line breaks"></textarea>
+
+<button id="save">Save</button>
+
+<script src="options.js"></script>
+
+</body>
+</html>
